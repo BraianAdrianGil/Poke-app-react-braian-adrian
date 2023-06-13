@@ -1,0 +1,35 @@
+.pokedex__page__general__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  font-family: "Inter", sans-serif;
+}
+.welcome__pokedex__page__container {
+  margin-top: 0.5rem;
+  width: 95%;
+  display: flex;
+  align-items: center;
+}
+.welcome__pokedex__page__container p {
+  max-width: 90%;
+  font-size: 13px;
+  font-weight: 400;
+}
+.welcome__pokedex__page__container span {
+  font-size: 14px;
+  font-weight: 700;
+  color: red;
+}
+.grid__pokemons__list {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 95%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}

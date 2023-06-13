@@ -1,0 +1,11 @@
+.pokemon__list__general__container {
+  margin-top: 1rem;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pokemon__list__pagination {
+  width: 100%;
+}
