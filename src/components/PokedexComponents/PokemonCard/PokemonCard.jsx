@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
-import classNames from "classnames";
+import { getColors } from "../../../utils/getColors/getColors";
 import { getPokemonById } from "../../../services/getPokemonById";
 import "./PokemonCard.css";
+import "../../../utils/getColors/getColors.css";
 
 const PokemonCard = ({ pokemonId }) => {
   const [pokemon, setPokemon] = useState(null);
-  const pokemonTypeColor = pokemon?.types[0];
+  const typeColors = pokemon?.types[0];
+  const color = getColors(typeColors);
+  const articleClasses = ` ${color} pokemon__card__general__container`;
+  const imgClasses = `${color} pokemon__img__container`;
 
   useEffect(() => {
     const loadPokemonById = async () => {
@@ -14,31 +18,6 @@ const PokemonCard = ({ pokemonId }) => {
     };
     loadPokemonById();
   }, [pokemonId]);
-
-  const pokemonTypeBackgroundColor = classNames({
-    normal: pokemonTypeColor === "normal",
-    grass: pokemonTypeColor === "grass",
-    water: pokemonTypeColor === "water",
-    fire: pokemonTypeColor === "fire",
-    fighting: pokemonTypeColor === "fighting",
-    poison: pokemonTypeColor === "poison",
-    ground: pokemonTypeColor === "ground",
-    rock: pokemonTypeColor === "rock",
-    bug: pokemonTypeColor === "bug",
-    ghost: pokemonTypeColor === "ghost",
-    steel: pokemonTypeColor === "steel",
-    ice: pokemonTypeColor === "ice",
-    dragon: pokemonTypeColor === "dragon",
-    dark: pokemonTypeColor === "dark",
-    fairy: pokemonTypeColor === "fairy",
-    electric: pokemonTypeColor === "electric",
-    psychic: pokemonTypeColor === "psychic",
-  });
-
-  console.log(pokemon);
-
-  const articleClasses = ` ${pokemonTypeBackgroundColor} pokemon__card__general__container`;
-  const imgClasses = `${pokemonTypeBackgroundColor} pokemon__img__container`;
 
   return (
     <article className={articleClasses}>
@@ -73,7 +52,9 @@ const PokemonCard = ({ pokemonId }) => {
             <section className="pokemon__second__dates__general__container">
               <div>
                 <h5>HP</h5>
-                <span>{pokemon.hp}</span>
+                <span>
+                  <span>{pokemon.hp}</span>
+                </span>
               </div>
               <div>
                 <h5>ATTACK</h5>

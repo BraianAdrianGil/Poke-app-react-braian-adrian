@@ -2,10 +2,15 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getPokemonById } from "../../services/getPokemonById";
 import "./pokemonDetail.css";
+import "./../../utils/getColors/getColors.css";
+import { getColors } from "./../../utils/getColors/getColors.js";
 
 const PokemonDetail = () => {
   const { pokemonId } = useParams();
   const [pokemonDetailData, setPokemonDetailData] = useState(null);
+  const mainDatesImgClasses = `${getColors(
+    pokemonDetailData?.types[0]
+  )} main__img__container`;
 
   useEffect(() => {
     const loadPokemon = async (id) => {
@@ -22,7 +27,7 @@ const PokemonDetail = () => {
       ) : (
         <article className="detail__general__container">
           <div className="main__dates__general__container">
-            <div className="main__img__container">
+            <div className={mainDatesImgClasses}>
               <img src={pokemonDetailData.image} alt={pokemonDetailData} />
             </div>
 
@@ -44,7 +49,9 @@ const PokemonDetail = () => {
                 <h4>Type</h4>
                 <ul>
                   {pokemonDetailData.types.map((type) => (
-                    <li key={type}>{type}</li>
+                    <li key={type} className={getColors(type)}>
+                      {type}
+                    </li>
                   ))}
                 </ul>
               </article>
