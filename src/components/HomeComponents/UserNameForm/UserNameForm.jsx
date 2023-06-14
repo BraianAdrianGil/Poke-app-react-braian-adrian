@@ -10,11 +10,11 @@ const UserNameForm = ({ onSendName }) => {
     const nameValue = e.target.value;
     if (!inputTouched.current) inputTouched.current = true;
     if (!nameValue) {
-      setNameError("Debes ingresar un nombre!");
+      setNameError("Please enter your name");
     } else if (/[^a-z ]/i.test(nameValue)) {
-      setNameError("Solo se pueden incluir letras y espacios!");
+      setNameError("You can enter only letters and spaces");
     } else if (!/^[a-z ]{2,} ?$/i.test(nameValue)) {
-      setNameError("El nombre debe ser mas largo que 2 caracteres!");
+      setNameError("The name must have more than 2 letters");
     } else {
       setNameError("");
     }

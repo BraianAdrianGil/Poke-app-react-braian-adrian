@@ -43,8 +43,8 @@
 }
 .home__form_error {
   position: absolute;
-  bottom: -3rem;
-  max-width: 200px;
+  left: 0;
+  bottom: -2.5rem;
   padding: 6px 5px 6px 5px;
   background-color: #d93f3f;
   color: white;
