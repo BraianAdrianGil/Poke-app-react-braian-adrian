@@ -1,18 +1,77 @@
-.loading__pokemon__card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+.normal {
+  background: linear-gradient(to bottom right, #afbfe0, #d9e0ee, #afbfe0);
 }
-.loading__pokemon__card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+.grass {
+  background: linear-gradient(
+    178.92deg,
+    #7ec6c5 0.92%,
+    #abdac6 47.96%,
+    #cae099 99.08%
+  );
+}
+.water {
+  background: linear-gradient(to bottom right, #0099ff, #00ffff, #0099ff);
+}
+.fire {
+  background: linear-gradient(#ff0000, #ff6a00, #ffd700);
+}
+.fighting {
+  background: linear-gradient(to bottom right, #ff005c, #ff6b00, #ff005c);
+}
+.poison {
+  background: linear-gradient(to bottom right, #8800ff, #c38dde, #8800ff);
 }
 
+.ground {
+  background: linear-gradient(to bottom right, #964b00, #d2b48c, #964b00);
+}
+.rock {
+  background: linear-gradient(to bottom right, #5d5d5d, #a8a8a8, #5d5d5d);
+}
+.bug {
+  background: linear-gradient(to bottom right, #00ff00, #b7ff00, #75b13d);
+}
+.ghost {
+  background: linear-gradient(
+    177.03deg,
+    #141636 -11.97%,
+    #454aa8 57.49%,
+    #acafeb 115.64%
+  );
+}
+.steel {
+  background: linear-gradient(to bottom right, #b5b2b2, #f0eeee, #b5b3b3);
+}
+.ice {
+  background: linear-gradient(#a0e6ff, #ffffff, #9ad9ff);
+}
+
+.dragon {
+  background: linear-gradient(to bottom right, #2b0080, #5b147d, #2b0080);
+}
+
+.dark {
+  background: linear-gradient(to bottom right, #141414, #4a4a4a, #141414);
+}
+
+.psychic {
+  background: linear-gradient(to bottom right, #8731e8, #ff00ff, #00ffff);
+}
+.fairy {
+  background: linear-gradient(to bottom right, #ff82b7, #d8b8c8, #d78de6);
+}
+.electric {
+  background: linear-gradient(to bottom right, #fc9a62, #fff200, #fca562);
+}
+/* CLASSNAMES CSS ==================================*/
+
+.loading__pokemon__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
 .pokemon__card__general__container {
   /* Estilos existentes de la tarjeta */
   display: flex;
@@ -22,56 +81,35 @@
   width: 100%;
   max-width: 265px;
   height: 395px;
-  background-color: rgb(139, 150, 139);
   position: relative;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   text-decoration: none;
   color: unset;
   overflow: hidden;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 6px 8px 10px rgba(0, 0, 0, 0.419);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
 .pokemon__card__general__container::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.689), transparent);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   pointer-events: none;
 }
-
 .pokemon__card__general__container:hover {
   transform: translateY(-4px) rotateX(10deg) rotateY(-10deg);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
 }
-
 .pokemon__card__general__container:hover::before {
   opacity: 1;
 }
-
-.pokemon__card__general__container .shine-effect {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), transparent);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.pokemon__card__general__container:hover .shine-effect {
-  opacity: 1;
-}
-
 .pokemon__card__loading__case__general__container {
   height: 45%;
   display: flex;
@@ -97,6 +135,7 @@
 }
 .pokemon__dates__general__container {
   padding-top: 1.5rem;
+  border-radius: 0 0 5px 5px;
   width: 95%;
   height: 60%;
   margin-bottom: 0.4rem;

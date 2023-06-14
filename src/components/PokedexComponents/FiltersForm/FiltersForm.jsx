@@ -13,7 +13,7 @@ const FiltersForm = ({ nameInitial, typeInitial }) => {
     setNameValue(newValue);
   };
 
-  const handleTypeChange = (e) => {
+  const handleTypeChange = async (e) => {
     const newTypeValue = e.target.value;
     setTypeValue(newTypeValue);
   };
@@ -32,7 +32,7 @@ const FiltersForm = ({ nameInitial, typeInitial }) => {
   }, [nameInitial, typeInitial]);
 
   return (
-    <Form className="filterform__general__container" action="">
+    <Form className="filterform__general__container">
       <div className="filterform__search__container">
         <input
           type="text"

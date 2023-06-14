@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import classNames from "classnames";
 import { getPokemonById } from "../../../services/getPokemonById";
 import "./PokemonCard.css";
 
 const PokemonCard = ({ pokemonId }) => {
   const [pokemon, setPokemon] = useState(null);
+  const pokemonTypeColor = pokemon?.types[0];
 
   useEffect(() => {
     const loadPokemonById = async () => {
@@ -13,8 +15,33 @@ const PokemonCard = ({ pokemonId }) => {
     loadPokemonById();
   }, [pokemonId]);
 
+  const pokemonTypeBackgroundColor = classNames({
+    normal: pokemonTypeColor === "normal",
+    grass: pokemonTypeColor === "grass",
+    water: pokemonTypeColor === "water",
+    fire: pokemonTypeColor === "fire",
+    fighting: pokemonTypeColor === "fighting",
+    poison: pokemonTypeColor === "poison",
+    ground: pokemonTypeColor === "ground",
+    rock: pokemonTypeColor === "rock",
+    bug: pokemonTypeColor === "bug",
+    ghost: pokemonTypeColor === "ghost",
+    steel: pokemonTypeColor === "steel",
+    ice: pokemonTypeColor === "ice",
+    dragon: pokemonTypeColor === "dragon",
+    dark: pokemonTypeColor === "dark",
+    fairy: pokemonTypeColor === "fairy",
+    electric: pokemonTypeColor === "electric",
+    psychic: pokemonTypeColor === "psychic",
+  });
+
+  console.log(pokemon);
+
+  const articleClasses = ` ${pokemonTypeBackgroundColor} pokemon__card__general__container`;
+  const imgClasses = `${pokemonTypeBackgroundColor} pokemon__img__container`;
+
   return (
-    <article className="pokemon__card__general__container">
+    <article className={articleClasses}>
       {!pokemon && (
         <div className="loading__pokemon__card">
           <p>Loading Pokemon</p>
@@ -27,7 +54,7 @@ const PokemonCard = ({ pokemonId }) => {
               <p>Loading Image...</p>
             </div>
           ) : (
-            <div className="pokemon__img__container">
+            <div className={imgClasses}>
               <img src={pokemon.image} alt={pokemon.name} />
             </div>
           )}

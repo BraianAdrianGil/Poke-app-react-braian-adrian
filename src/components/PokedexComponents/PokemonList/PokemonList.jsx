@@ -1,8 +1,8 @@
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import { usePagination } from "../../../hooks/usePagination.js";
 import PaginationComponent from "../PaginationComponent/PaginationComponent";
 import PokemonCard from "../PokemonCard/PokemonCard.jsx";
-import { Link } from "react-router-dom";
 
 import "./PokemonList.css";
 

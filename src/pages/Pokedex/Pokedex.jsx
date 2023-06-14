@@ -23,7 +23,7 @@ const Pokedex = () => {
       {!pokemons.length ? (
         <p>No hay pokemones</p>
       ) : (
-        <PokemonList pokemons={pokemons} />
+        <PokemonList pokemons={pokemons} pokemonTypeId={pokemonTypeId} />
       )}
     </section>
   );
