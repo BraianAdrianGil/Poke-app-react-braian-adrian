@@ -102,53 +102,66 @@
   margin-top: 0.25rem;
 }
 .type__ability__general__container {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 1rem;
+  gap: 1rem;
 }
 .type__container,
 .ability__container {
-  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.type__container {
-  margin-right: 1rem;
-}
-.type__container ul li {
-  background-color: rgb(172, 178, 199);
-}
 .ability__container {
-  margin-right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ability__container ul {
+  width: 100%;
+  max-width: 180px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .ability__container ul li {
+  width: 90px;
   color: rgb(61, 59, 59);
+  border: 1px solid rgba(0, 0, 0, 0.292);
+}
+.type__container {
+  min-width: 120px;
+  padding-left: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.type__container ul li {
+  min-width: 55px;
 }
 .type__container ul,
 .ability__container ul {
   margin-top: 0.25rem;
   width: 100%;
-  max-width: 141px;
   list-style: none;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 0.18rem;
   font-weight: 500;
 }
 .type__container ul li,
 .ability__container ul li {
   padding: 5px;
-  border-radius: 5px;
   margin-top: 0.2rem;
   font-weight: 500;
   font-size: 13px;
   display: inline-block;
+  text-align: center;
 }
 .type__container ul li::first-letter,
 .ability__container ul li::first-letter {

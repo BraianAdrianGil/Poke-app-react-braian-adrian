@@ -41,10 +41,18 @@ const PokemonCard = ({ pokemonId }) => {
           <div className="pokemon__dates__general__container">
             <section className="pokemon__first__dates__general__container">
               <h2>{pokemon.name}</h2>
-              <h4>Type:</h4>
+              <h4>Type</h4>
               <ul>
                 {pokemon.types.map((type) => (
-                  <li key={type}>{type}</li>
+                  <li
+                    key={type}
+                    className={getColors(type)}
+                    style={{
+                      color: type === "dark" && "white",
+                    }}
+                  >
+                    {type}
+                  </li>
                 ))}
               </ul>
             </section>

@@ -49,7 +49,11 @@ const PokemonDetail = () => {
                 <h4>Type</h4>
                 <ul>
                   {pokemonDetailData.types.map((type) => (
-                    <li key={type} className={getColors(type)}>
+                    <li
+                      key={type}
+                      className={getColors(type)}
+                      style={{ color: type === "dark" && "white" }}
+                    >
                       {type}
                     </li>
                   ))}

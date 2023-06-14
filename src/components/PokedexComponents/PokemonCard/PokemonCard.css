@@ -94,10 +94,11 @@
   font-size: 20px;
 }
 .pokemon__first__dates__general__container h4 {
-  margin-top: 0.3rem;
+  margin-top: 0.15rem;
+  margin-bottom: 0.25rem;
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  color: #817a7a;
+  font-weight: 600;
+  color: #3c3939;
 }
 .pokemon__first__dates__general__container ul {
   width: 100%;
@@ -110,6 +111,16 @@
   text-transform: capitalize;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
+}
+.pokemon__first__dates__general__container ul li {
+  padding: 2px 4px 2px 4px;
+  margin-top: 0.1rem;
+  width: 60px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  text-align: center;
 }
 .pokemon__second__dates__general__container {
   width: 100%;
@@ -128,9 +139,10 @@
 }
 .pokemon__second__dates__general__container div h5 {
   font-family: "Inter", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
 }
 .pokemon__second__dates__general__container div span {
   font-family: "Inter", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 14px;
 }
