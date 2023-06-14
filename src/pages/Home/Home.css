@@ -122,6 +122,18 @@
     width: 86px;
   }
 }
+/* 500PX=====================================  */
+@media screen and (min-width: 500px) {
+  .pokedex__img__container {
+    max-width: 400px;
+    height: 121px;
+  }
+  .pokeball__img {
+    top: 3.5%;
+    left: 7.95%;
+    width: 123px;
+  }
+}
 /* 700PX=======================================*/
 @media screen and (min-width: 700px) {
   .pokedex__img__container {
