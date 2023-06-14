@@ -10,6 +10,10 @@
   position: relative;
   padding: 1rem;
   font-family: "Inter", sans-serif;
+  background-image: url("https://i.imgur.com/w1LQTNQ.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .pokedex__img__container {
   margin: 0 1rem;
@@ -46,13 +50,16 @@
 }
 .welcome__general__container h1 {
   font-weight: 700;
-  color: #fe1936;
+  font-family: "Roboto", sans-serif;
+  color: #c1c6ca;
   font-size: 30px;
+  text-shadow: 3px -1px 8px rgba(82, 78, 78, 0.5);
 }
 .welcome__general__container p {
   font-weight: 500;
-  color: #302f2f;
+  color: #d0c2c2;
   font-size: 0.8rem;
+  text-shadow: 3px -1px 8px rgba(6, 6, 6, 0.5);
 }
 .home__footer__general__container {
   width: 100%;
@@ -61,26 +68,23 @@
   bottom: 0;
 }
 .home__footer__red__container {
-  background-color: #dd1a1a;
-  width: 100%;
-  height: 70%;
-}
-.home__footer__black__container {
-  background-color: rgb(0, 0, 0);
-  width: 100%;
-  height: 30%;
+  background-color: #171009;
+  width: 12%;
+  height: 75%;
+  border-radius: 50%;
 }
 .footer__pokeball__img {
-  background-image: url("https://i.imgur.com/Z7yRTmK.png");
+  background-image: url("https://i.imgur.com/IMEJ8ib.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  width: 45px;
+  width: 200px;
   aspect-ratio: 1;
   z-index: 8;
   position: absolute;
-  bottom: 5%;
-  left: 44.5%;
+
+  top: 2.68rem;
+  left: 31.7%;
   animation: pokeball-animation 2s infinite;
 }
 @keyframes pokeball-animation {
@@ -98,5 +102,38 @@
   }
   100% {
     transform: translateX(0px) rotate(0deg);
+  }
+}
+/* Media queries============================= */
+@media screen and (min-width: 420px) {
+  .welcome__general__container h1 {
+    font-size: 34px;
+  }
+  .welcome__general__container p {
+    font-size: 1rem;
+  }
+}
+/* 700PX=======================================*/
+@media screen and (min-width: 700px) {
+  .pokedex__img__container {
+    top: 5rem;
+  }
+  .welcome__general__container h1 {
+    font-size: 50px;
+  }
+  .welcome__general__container p {
+    font-size: 1.5rem;
+  }
+  .pikachu__container {
+    z-index: 1;
+    top: 65%;
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+  }
+  .pikachu__container img {
+    max-width: 100%;
+    width: 200px;
+    aspect-ratio: 1;
   }
 }

@@ -14,8 +14,8 @@ const Pokedex = () => {
     <section className="pokedex__page__general__container">
       <div className="welcome__pokedex__page__container">
         <p>
-          <span>Bienvenido {userName}</span>, aquí encontraras tus pokemones
-          favoritos !
+          <span>Welcome {userName}</span>, here you will find all your favorites
+          pokemons!
         </p>
       </div>
       <FiltersForm nameInitial={pokemonName} typeInitial={pokemonTypeId} />

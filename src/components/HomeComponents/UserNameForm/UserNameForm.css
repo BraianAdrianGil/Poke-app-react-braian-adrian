@@ -1,5 +1,6 @@
 .home__form__container {
   width: 90%;
+  max-width: 260px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,4 +63,42 @@
   transform: rotate(45deg);
   top: -4px;
   left: 3%;
+}
+/* Media queries================== */
+@media screen and (min-width: 420px) {
+  .home__input {
+    height: 32px;
+    font-size: 14px;
+  }
+  .home__form__button {
+    height: 32px;
+    font-weight: 500;
+  }
+  .home__form_error {
+    position: absolute;
+    left: 0;
+    bottom: -2.7rem;
+    padding: 6px 5px 6px 5px;
+    background-color: #d93f3f;
+    color: rgb(249, 249, 249);
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(7, 7, 7, 0.5);
+  }
+}
+@media screen and (min-width: 700px) {
+  .home__form__container {
+    margin-bottom: 5rem;
+    max-width: 300px;
+  }
+  .home__input {
+    height: 32px;
+    font-size: 14px;
+  }
+  .home__form__button {
+    height: 32px;
+    font-weight: 500;
+  }
 }

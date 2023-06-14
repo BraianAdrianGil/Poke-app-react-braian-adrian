@@ -41,3 +41,6 @@
   right: 1.8rem;
   animation: pokeball-animation 2s infinite;
 }
+/* Media queries========================= */
+@media screen and (min-width: 700px) {
+}

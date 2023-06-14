@@ -27,12 +27,7 @@ const Home = () => {
 
       <UserNameForm onSendName={handleSendName} />
 
-      <footer className="home__footer__general__container">
-        <div className="home__footer__red__container"></div>
-        <div className="home__footer__black__container"></div>
-
-        <div className="footer__pokeball__img"></div>
-      </footer>
+      <div className="footer__pokeball__img"></div>
     </div>
   );
 };
