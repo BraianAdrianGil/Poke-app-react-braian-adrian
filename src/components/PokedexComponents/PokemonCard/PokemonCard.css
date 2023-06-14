@@ -61,8 +61,9 @@
   background: linear-gradient(to bottom right, #ff82b7, #d8b8c8, #d78de6);
 }
 .electric {
-  background: linear-gradient(to bottom right, #fc9a62, #fff200, #fca562);
+  background: linear-gradient(to bottom right, #ffff00, #ebe3e3, #ffff00);
 }
+
 /* CLASSNAMES CSS ==================================*/
 
 .loading__pokemon__card {
