@@ -31,13 +31,13 @@ const UserNameForm = ({ onSendName }) => {
       <form onSubmit={handleSubmit} className="home__form__container">
         <input
           type="text"
-          placeholder="Tu nombre..."
+          placeholder="Your name..."
           onChange={handleChange}
           value={userNameValue}
           className="home__input"
         />
         <button type="submit" className="home__form__button">
-          Comenzar
+          Start
         </button>
         {Boolean(nameError) && <p className="home__form_error">{nameError}</p>}
       </form>

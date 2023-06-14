@@ -21,8 +21,8 @@ const Home = () => {
       </div>
 
       <div className="welcome__general__container">
-        <h1>¡Hola entrenador!</h1>
-        <p>Para poder comenzar, dime tu nombre</p>
+        <h1>¡Hi Trainer!</h1>
+        <p>To begin, please give me your name</p>
       </div>
 
       <UserNameForm onSendName={handleSendName} />
