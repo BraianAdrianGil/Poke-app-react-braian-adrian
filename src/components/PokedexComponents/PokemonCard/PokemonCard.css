@@ -61,7 +61,14 @@
   background: linear-gradient(to bottom right, #ff82b7, #d8b8c8, #d78de6);
 }
 .electric {
-  background: linear-gradient(to bottom right, #ffff00, #ebe3e3, #ffff00);
+  background: linear-gradient(
+    to bottom right,
+    #ffff00,
+    #ff9900,
+    #ede290,
+    #ff9900,
+    #ffff00
+  );
 }
 
 /* CLASSNAMES CSS ==================================*/
