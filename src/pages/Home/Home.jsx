@@ -14,7 +14,9 @@ const Home = () => {
   };
   return (
     <div className="home__general__container">
-      <div className="pokedex__img__container"></div>
+      <div className="pokedex__img__container">
+        <div className="pokeball__img"></div>
+      </div>
 
       <div className="pikachu__container">
         <img src="https://i.imgur.com/tV5jP6X.png" alt="" />
@@ -26,8 +28,6 @@ const Home = () => {
       </div>
 
       <UserNameForm onSendName={handleSendName} />
-
-      <div className="footer__pokeball__img"></div>
     </div>
   );
 };
