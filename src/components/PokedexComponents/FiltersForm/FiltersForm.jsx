@@ -36,27 +36,33 @@ const FiltersForm = ({ nameInitial, typeInitial }) => {
       <div className="filterform__search__container">
         <input
           type="text"
-          placeholder="Busca un pokemon"
+          placeholder="Search specific pokemon"
           value={nameValue}
           onChange={handleChange}
           name="pokemonName"
         />
-        <button>Buscar</button>
+        <button>Search</button>
       </div>
 
-      <div className="filterform__select__container">
-        <select
-          name="pokemonType"
-          value={typeValue}
-          onChange={handleTypeChange}
-        >
-          <option value="">All</option>
-          {types.map((type) => (
-            <option key={type.id} value={type.id}>
-              {type.name}
-            </option>
-          ))}
-        </select>
+      <div className="filterform__select__general__container">
+        <div className="filterform__select__title">
+          <h4>Filter Pokemons</h4>
+        </div>
+        <div className="filterform__select__container">
+          <select
+            name="pokemonType"
+            value={typeValue}
+            onChange={handleTypeChange}
+            className="filterform__select"
+          >
+            <option value="">All</option>
+            {types.map((type) => (
+              <option key={type.id} value={type.id}>
+                {type.name}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
     </Form>
   );
