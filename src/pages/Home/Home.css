@@ -45,7 +45,7 @@
   z-index: 1;
   bottom: 5%;
   left: 0;
-  position: absolute;
+  position: relative;
   width: 100%;
 }
 .pikachu__container img {
@@ -212,7 +212,6 @@
   .pikachu__container {
     z-index: 1;
     top: 65%;
-    position: absolute;
     width: 100%;
     max-width: 100%;
   }

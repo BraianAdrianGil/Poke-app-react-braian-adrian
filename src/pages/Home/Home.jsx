@@ -58,10 +58,10 @@ const Home = () => {
             <a href="tel:+598098604405"> +598098604405</a>
           </p>
         </div>
+        <div className="pikachu__container">
+          <img src="https://i.imgur.com/tV5jP6X.png" alt="" />
+        </div>
       </footer>
-      <div className="pikachu__container">
-        <img src="https://i.imgur.com/tV5jP6X.png" alt="" />
-      </div>
     </div>
   );
 };
