@@ -14,16 +14,14 @@ const Home = () => {
   };
   return (
     <div className="home__general__container">
-      <div className="pokedex__img__container">
-        <div className="pokeball__img"></div>
-      </div>
-      <div className="pikachu__container">
-        <img src="https://i.imgur.com/tV5jP6X.png" alt="" />
-      </div>
       <div className="welcome__general__container">
+        <div className="pokedex__img__container">
+          <div className="pokeball__img"></div>
+        </div>
         <h1>¡Hi Trainer!</h1>
         <p>To begin, please give me your name</p>
       </div>
+
       <div className="home__footer__social__networks">
         <a
           href="https://github.com/BraianAdrianGil/"
@@ -61,6 +59,9 @@ const Home = () => {
           </p>
         </div>
       </footer>
+      <div className="pikachu__container">
+        <img src="https://i.imgur.com/tV5jP6X.png" alt="" />
+      </div>
     </div>
   );
 };

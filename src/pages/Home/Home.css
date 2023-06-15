@@ -22,7 +22,7 @@
   width: 90%;
   max-width: 292px;
   height: 121px;
-  top: 7rem;
+  bottom: 5rem;
   background-image: url("https://i.imgur.com/cEVHBmB.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -43,7 +43,7 @@
 }
 .pikachu__container {
   z-index: 1;
-  top: 71.5%;
+  bottom: 5%;
   left: 0;
   position: absolute;
   width: 100%;
@@ -61,6 +61,7 @@
   align-items: center;
   gap: 0.5rem;
   text-align: center;
+  position: relative;
 }
 .welcome__general__container h1 {
   font-weight: 700;
@@ -158,6 +159,9 @@
 .home__footer__contact__general__container span {
   color: #000000;
 }
+.bxl-github {
+  color: black;
+}
 /* Media queries============================= */
 @media screen and (min-width: 420px) {
   .welcome__general__container h1 {
@@ -169,7 +173,6 @@
   .pokedex__img__container {
     max-width: 294px;
     height: 121px;
-    top: 7rem;
   }
   .pokeball__img {
     top: 15.75%;
@@ -192,13 +195,13 @@
 /* 700PX=======================================*/
 @media screen and (min-width: 700px) {
   .pokedex__img__container {
-    top: 5rem;
-    max-width: 600px;
+    max-width: 500px;
+    bottom: 8rem;
   }
   .pokeball__img {
-    top: -19%;
-    left: 8.3%;
-    width: 178px;
+    top: -12%;
+    left: 7.6%;
+    width: 155px;
   }
   .welcome__general__container h1 {
     font-size: 50px;
