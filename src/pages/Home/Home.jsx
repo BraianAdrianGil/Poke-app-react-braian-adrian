@@ -17,6 +17,10 @@ const Home = () => {
   };
   return (
     <div className="home__general__container">
+      <div className="charizard"></div>
+      <div className="eevee"></div>
+      <div className="mewtwo"></div>
+
       <div className="welcome__general__container">
         <div className="pokedex__img__container">
           <div className="pokeball__img"></div>
