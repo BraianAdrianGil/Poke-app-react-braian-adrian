@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import "./UserNameForm.css";
-import { Link, Navigate } from "react-router-dom";
 
 const UserNameForm = ({ onSendName }) => {
   const [userNameValue, setUserNameValue] = useState("");
@@ -25,6 +24,7 @@ const UserNameForm = ({ onSendName }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!nameError && inputTouched.current) onSendName(userNameValue);
+    console.log(e);
   };
 
   return (
@@ -37,9 +37,9 @@ const UserNameForm = ({ onSendName }) => {
           value={userNameValue}
           className="home__input"
         />
-        <Navigate to={"/pokedex"} type="submit" className="home__form__button">
+        <button type="submit" className="home__form__button">
           Start
-        </Navigate>
+        </button>
         {Boolean(nameError) && <p className="home__form_error">{nameError}</p>}
       </form>
     </>
