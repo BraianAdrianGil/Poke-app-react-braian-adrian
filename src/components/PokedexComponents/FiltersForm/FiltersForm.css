@@ -2,17 +2,19 @@
   width: 95%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
   gap: 0.25rem;
+  z-index: 1;
 }
 .filterform__search__container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 320px;
 }
 .filterform__search__container input {
   height: 26px;
@@ -51,6 +53,7 @@
 .filterform__select__general__container {
   margin-top: 0.5rem;
   width: 100%;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,7 +64,7 @@
   text-align: left;
   font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
-  color: rgb(125, 125, 132);
+  color: rgb(156, 156, 162);
 }
 .filterform__select__container {
   width: 100%;
@@ -85,28 +88,19 @@
   font-weight: 500;
   text-transform: capitalize;
 }
-
-/* .home__input {
-  height: 26px;
-  width: 70%;
-  padding-left: 0.28rem;
-  font-weight: 500;
-  font-family: "Inter", sans-serif;
-  border: 1px solid rgb(196, 189, 189);
-  outline: none;
-  position: relative;
+/* MEDIA QUERIES======================== */
+@media screen and (min-width: 550px) {
+  .filterform__search__container input {
+    height: 30px;
+  }
+  .filterform__search__container button {
+    height: 30px;
+  }
+  .filterform__select__title {
+    font-size: 18px;
+  }
+  .filterform__select {
+    width: 45%;
+    font-size: 14px;
+  }
 }
-.home__form__button {
-  height: 26px;
-  width: 30%;
-  border: none;
-  background-color: #d93f3f;
-  color: white;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 5px;
-  cursor: pointer;
-  transition: 1s ease-in-out;
-}
-
-} */

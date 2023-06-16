@@ -1,4 +1,5 @@
 import "./HeaderCommon.css";
+
 const HeaderCommon = () => {
   return (
     <div className="header__common__general__container">

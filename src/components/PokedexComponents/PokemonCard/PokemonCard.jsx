@@ -48,7 +48,10 @@ const PokemonCard = ({ pokemonId }) => {
                     key={type}
                     className={getColors(type)}
                     style={{
-                      color: type === "dark" && "white",
+                      color:
+                        (type === "ghost" && "white") ||
+                        (type === "dragon" && "white") ||
+                        (type == "dark" && "white"),
                     }}
                   >
                     {type}

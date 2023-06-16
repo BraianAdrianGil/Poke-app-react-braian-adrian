@@ -1,16 +1,19 @@
 import { useContext } from "react";
 import UserNameForm from "../../components/HomeComponents/UserNameForm/UserNameForm";
 import { UserNameContext } from "../../context/UserNameContext";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./Home.css";
 
 const Home = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  //Ruta original a donde quería entrar el usuario
   const { saveUserName } = useContext(UserNameContext);
+  const from = location.state?.from ?? "/";
 
   const handleSendName = (userNameValue) => {
     saveUserName(userNameValue);
-    navigate("/Pokedex");
+    navigate(from);
   };
   return (
     <div className="home__general__container">

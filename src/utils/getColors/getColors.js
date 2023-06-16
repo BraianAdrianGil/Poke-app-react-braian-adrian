@@ -19,5 +19,6 @@ export const getColors = (type) => {
     fairy: type === "fairy",
     electric: type === "electric",
     psychic: type === "psychic",
+    flying: type === "flying",
   });
 };
