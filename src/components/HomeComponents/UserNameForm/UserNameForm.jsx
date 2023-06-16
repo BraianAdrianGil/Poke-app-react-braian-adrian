@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import "./UserNameForm.css";
+import { Link } from "react-router-dom";
 
 const UserNameForm = ({ onSendName }) => {
   const [userNameValue, setUserNameValue] = useState("");
@@ -36,9 +37,9 @@ const UserNameForm = ({ onSendName }) => {
           value={userNameValue}
           className="home__input"
         />
-        <button type="submit" className="home__form__button">
+        <Link to={"/pokedex"} type="submit" className="home__form__button">
           Start
-        </button>
+        </Link>
         {Boolean(nameError) && <p className="home__form_error">{nameError}</p>}
       </form>
     </>

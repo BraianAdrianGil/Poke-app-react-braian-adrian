@@ -1,11 +1,9 @@
 import { useContext } from "react";
 import UserNameForm from "../../components/HomeComponents/UserNameForm/UserNameForm";
 import { UserNameContext } from "../../context/UserNameContext";
-
 import "./Home.css";
 
 const Home = () => {
-  //Ruta original a donde quería entrar el usuario
   const { saveUserName } = useContext(UserNameContext);
 
   const handleSendName = (userNameValue) => {
@@ -47,7 +45,9 @@ const Home = () => {
           <i className="bx bxl-twitter" style={{ color: "#6dd4d4" }}></i>
         </a>
       </div>
+
       <UserNameForm onSendName={handleSendName} />
+
       <footer className="home__footer__general__container">
         <div className="home__footer__rights__general__container">
           <p>&copy; 2023 Braian Adrian G. Todos los derechos reservados.</p>
