@@ -1,16 +1,13 @@
 import { useContext } from "react";
-import { Navigate, useLocation } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { UserNameContext } from "../../context/UserNameContext";
 
 const ProtectedRouter = ({ children }) => {
   //Para leer el valor de un contexto se necesitan el contexto y el hook useContext.
   const { userName } = useContext(UserNameContext);
-  const location = useLocation();
+
   if (userName) return <>{children}</>;
-  else
-    return (
-      <Navigate to="/" state={{ from: location.pathname + location.search }} />
-    );
+  else return <Navigate to="/" />;
 };
 
 export default ProtectedRouter;
