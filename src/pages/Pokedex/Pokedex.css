@@ -1,3 +1,10 @@
+.no__pokemons{
+  height: 100vh;
+}
+.no__pokemons p{
+  margin-top: 3.5rem;
+  text-align: center;
+}
 .pokedex__page__general__container {
   width: 100%;
   display: flex;

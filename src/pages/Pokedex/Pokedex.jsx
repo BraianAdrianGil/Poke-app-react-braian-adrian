@@ -24,7 +24,9 @@ const Pokedex = () => {
       <FiltersForm nameInitial={pokemonName} typeInitial={pokemonTypeId} />
 
       {!pokemons.length ? (
-        <p>No hay pokemones</p>
+        <div className="no__pokemons">
+          <p>No hay pokemones</p>
+        </div>
       ) : (
         <PokemonList pokemons={pokemons} pokemonTypeId={pokemonTypeId} />
       )}
