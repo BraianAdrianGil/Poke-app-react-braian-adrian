@@ -7,7 +7,7 @@ const getPokemonImg = (sprites) => {
   if (firstOption) return firstOption;
   if (secondOption) return secondOption;
   if (thirdOption) return thirdOption;
-
+  return "https://pbs.twimg.com/profile_images/677508993686700035/5hQ59Dm4_400x400.png";
   //return imagen de un pokemon con signo de interrogación.
 };
 

@@ -1,7 +1,25 @@
-.no__pokemons{
+.log__out {
+  position: absolute;
+  right: 0.25rem;
+  top: 5.55rem;
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+  background-color: #d93f3f;
+  color: white;
+  font-weight: 400;
+  font-size: 12px;
+  font-family: "Roboto";
+  cursor: pointer;
+  transition: 1s ease-in-out;
+}
+.log__out:hover {
+  animation: button-animation 1s infinite;
+}
+.no__pokemons {
   height: 100vh;
 }
-.no__pokemons p{
+.no__pokemons p {
   margin-top: 3.5rem;
   text-align: center;
 }

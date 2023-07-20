@@ -7,7 +7,10 @@ const ProtectedRouter = ({ children }) => {
   const { userName } = useContext(UserNameContext);
 
   if (userName) return <>{children}</>;
-  else return <Navigate to="/" />;
+  else
+    return (
+      <Navigate to="/" state={{ from: location.pathname + location.search }} />
+    );
 };
 
 export default ProtectedRouter;
